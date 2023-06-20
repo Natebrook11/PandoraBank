@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CodePen - Responsive Dashboard design for Financial CRM</title>
+    <link rel="stylesheet" href="/src/home.css">
+    <link rel="stylesheet" href="/src/index.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+    <script src='https://unpkg.com/phosphor-icons'></script>
+
+</head>
+
+<body>
+    <div id="preloader" class="preloader">
+        <div class="loader">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </div>
+        <p class="preloader-text">Loading...</p>
+    </div>
+    <script>
+        // Hide preloader after a delay
+        window.addEventListener('load', function () {
+            var preloader = document.getElementById('preloader');
+            setTimeout(function () {
+                preloader.style.transform = 'translateX(-100%)';
+            }, 2000);
+            setTimeout(function () {
+                preloader.style.display = 'none';
+            }, 2900); // Set the delay time in milliseconds (2 seconds in this example)
+        });
+    </script>
+    <nav class="navbar">
+        <a class="navbar-brand" href="#">
+            <div class="icon-container">
+                <img class="icon hexagon" />
+            </div>
+            <span class="name">Pandora. Bank</span>
+        </a>
+        <ul class="navbar-nav">
+            <li>
+                <a href="#home" class="active"><img class="icon home" /><span>Home</span></a>
+            </li>
+            <li>
+                <a href="#challenges"><img class="icon statistics" /><span>Chalenges</span></a>
+            </li>
+            <li>
+                <a href="#shop"><img class="icon mail" /><span>Shop</span></a>
+            </li>
+            <li>
+                <a><img class="icon user" /><span>Profile</span></a>
+            </li>
+            <li>
+                <a><img class="icon file" /><span>Documents</span></a>
+            </li>
+        </ul>
+        <div class="navbar-footer">
+            <img class="image-documents" src="https://ozcanzaferayan.github.io/financial-crm/img/documents.svg"
+                alt="documents" />
+        </div>
+    </nav>
+    <main>
+        <header>
+            <section role="search">
+                <form action="#" method="get">
+                    <div class="form-inline">
+                        <img class="icon search" />
+                        <input type="search" placeholder="Search" />
+                    </div>
+                </form>
+            </section>
+
+            <section role="application">
+                <a href="/index.html"><button class="change-view">
+                        <img class="icon layout" />Landing page
+                    </button></a>
+                <button class="notification">
+                    <img class="icon notification" />
+                </button>
+                <button class="menu">
+                    <img class="icon menu" />
+                </button>
+            </section>
+        </header>
+        <section id="home">
+            <h1 style="display: block !important; font-size: clamp(10px, 6vw , 30px); margin-left: 20px;">Pandora.
+            </h1>
+            <h1 style="display: block !important; font-size: clamp(10px, 10vw , 30px); margin-left: 20px;" id="total">
+                Total : 0 🪙</h1>
+            <div class="charts-wrapper">
+                <section role="credit-card">
+                    <div class="top">
+                    </div>
+                    <div class="ccNumber">
+                        <span>
+                            <span> Your Id:</span><br>
+                            <span id="userId">˙˙˙˙ ˙˙˙˙ ˙˙˙˙ ˙˙˙˙ 5610</span></span><br>
+                    </div>
+                    <div class="ccBottom">
+                        <button onclick="copyToClipboard('user')" class="copy">
+                            <span data-text-end="Copied!" data-text-initial="Copy to clipboard" class="tooltip"></span>
+                            <span>
+                                <svg xml:space="preserve" style="enable-background:new 0 0 512 512"
+                                    viewBox="0 0 6.35 6.35" y="0" x="0" height="20" width="20"
+                                    xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1"
+                                    xmlns="http://www.w3.org/2000/svg" class="clipboard">
+                                    <g>
+                                        <path fill="currentColor"
+                                            d="M2.43.265c-.3 0-.548.236-.573.53h-.328a.74.74 0 0 0-.735.734v3.822a.74.74 0 0 0 .735.734H4.82a.74.74 0 0 0 .735-.734V1.529a.74.74 0 0 0-.735-.735h-.328a.58.58 0 0 0-.573-.53zm0 .529h1.49c.032 0 .049.017.049.049v.431c0 .032-.017.049-.049.049H2.43c-.032 0-.05-.017-.05-.049V.843c0-.032.018-.05.05-.05zm-.901.53h.328c.026.292.274.528.573.528h1.49a.58.58 0 0 0 .573-.529h.328a.2.2 0 0 1 .206.206v3.822a.2.2 0 0 1-.206.205H1.53a.2.2 0 0 1-.206-.205V1.529a.2.2 0 0 1 .206-.206z">
+                                        </path>
+                                    </g>
+                                </svg>
+                                <svg xml:space="preserve" style="enable-background:new 0 0 512 512" viewBox="0 0 24 24"
+                                    y="0" x="0" height="18" width="18" xmlns:xlink="http://www.w3.org/1999/xlink"
+                                    version="1.1" xmlns="http://www.w3.org/2000/svg" class="checkmark">
+                                    <g>
+                                        <path data-original="#000000" fill="currentColor"
+                                            d="M9.707 19.121a.997.997 0 0 1-1.414 0l-5.646-5.647a1.5 1.5 0 0 1 0-2.121l.707-.707a1.5 1.5 0 0 1 2.121 0L9 14.171l9.525-9.525a1.5 1.5 0 0 1 2.121 0l.707.707a1.5 1.5 0 0 1 0 2.121z">
+                                        </path>
+                                    </g>
+                                </svg>
+                            </span>
+                        </button>
+                        <div class="ccValidThru">
+                            <label>VALID THRU</label>
+                            <span>05/23</span>
+                        </div>
+                        <div class="ccCardHolder">
+                            <label>CARD HOLDER</label>
+                            <span>Pandora.</span>
+                        </div>
+                    </div>
+                </section>
+
+                <section role="chart" class="exchange-rates">
+                    <canvas id="exchangeRates"></canvas>
+                </section>
+                <section role="chart" class="last-costs">
+                    <canvas id="last_costs"></canvas>
+
+                </section>
+                <section role="chart" class="efficiency">
+                    <canvas id="efficiency"></canvas>
+
+                </section>
+        </section>
+        <section class="transfer-section">
+            <div class="transfer-section-header">
+                <h2>Transactions</h2>
+            </div>
+            <div id="transfer" class=" transfer-box hide">
+
+
+                <input type="text" id="receiver" name="receiver" placeholder="Receiver" required><br><br>
+
+                <input type="number" id="amount" name="amount" placeholder="Amount" required><br><br>
+
+                <input onclick="transfer()" type="submit" value="Transfer">
+            </div>
+        </section>
+
+        <section id="challenges" class="challenges">
+            <h1>Chalenges</h1>
+            <div class="project-boxes">
+                <div class="project-box">
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse tempora aspernatur repudiandae
+                        molestiae. Amet vero quo, voluptatem facere sapiente, temporibus exercitationem soluta
+                        dignissimos autem nobis molestiae ducimus voluptate numquam id.</p>
+                    <button class="button">
+                        <div class="button-overlay"></div>
+                        <span>Login <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 53 58" height="58"
+                                width="53">
+                                <path stroke-width="9" stroke="currentColor"
+                                    d="M44.25 36.3612L17.25 51.9497C11.5833 55.2213 4.5 51.1318 4.50001 44.5885L4.50001 13.4115C4.50001 6.86824 11.5833 2.77868 17.25 6.05033L44.25 21.6388C49.9167 24.9104 49.9167 33.0896 44.25 36.3612Z">
+                                </path>
+                            </svg></span>
+                    </button>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <section id="shop">
+            <h1>Shop</h1>
+
+
+        </section>
+        </div>
+    </main>
+</body>
+<!-- partial -->
+<script src='https://cdn.jsdelivr.net/npm/chart.js@2.9.3/dist/Chart.min.js'></script>
+<script src='https://ozcanzaferayan.github.io/financial-crm/vendor/chartjs/Chart.roundedBarCharts.js'></script>
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- Our script must be loaded after firebase references -->
+<script src="/src/home.js"></script>
+
+<script src="/src/chart.js"></script>
+<script>
+
+    function toggleActiveClass() {
+        const navbarItems = document.querySelectorAll('.navbar-nav li a');
+        const sections = document.querySelectorAll('section');
+
+        navbarItems.forEach(item => {
+            item.addEventListener('click', (event) => {
+                event.preventDefault();
+
+                // Remove "active" class from all items
+                navbarItems.forEach(item => {
+                    item.classList.remove('active');
+                });
+
+                // Add "active" class to clicked item
+                item.classList.add('active');
+
+                // Scroll to the href of the clicked item
+                const targetId = item.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+                targetElement.scrollIntoView({ behavior: 'smooth' });
+            });
+        });
+
+        // Activate the corresponding item when a section becomes visible
+        const options = {
+            rootMargin: '-50% 0% -50% 0%', // Adjust the margin as needed
+        };
+
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const targetId = entry.target.getAttribute('id');
+                    const correspondingNavItem = document.querySelector(`.navbar-nav li a[href="#${targetId}"]`);
+
+                    // Remove "active" class from all items
+                    navbarItems.forEach(item => {
+                        item.classList.remove('active');
+                    });
+
+                    // Add "active" class to corresponding navigation item
+                    correspondingNavItem.classList.add('active');
+                }
+            });
+        }, options);
+
+        // Observe each section
+        sections.forEach(section => {
+            observer.observe(section);
+        });
+
+        // Check if the user is at the home section or scrolled to the top
+        function checkScrollPosition() {
+            const homeSection = document.getElementById('home');
+            const homeNavItem = document.querySelector('.navbar-nav li a[href="#home"]');
+            const scrollPosition = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (homeSection && (homeSection.offsetTop === scrollPosition || scrollPosition < 700)) {
+                homeNavItem.classList.add('active');
+            }
+        }
+
+        // Call checkScrollPosition() on page load and scroll events
+        window.addEventListener('load', checkScrollPosition);
+        window.addEventListener('scroll', checkScrollPosition);
+    }
+
+    document.addEventListener('DOMContentLoaded', toggleActiveClass);
+</script>
+
+</html>

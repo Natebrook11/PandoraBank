@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pandora. - Login</title>
+
+  <link rel="stylesheet" href="/src/index.css">
+</head>
+
+<body>
+  <div id="preloader" class="preloader">
+    <div class="loader">
+      <span class="bar"></span>
+      <span class="bar"></span>
+      <span class="bar"></span>
+    </div>
+    <p class="preloader-text">Loading...</p>
+  </div>
+  <script>
+    // Hide preloader after a delay
+    window.addEventListener('load', function () {
+      var preloader = document.getElementById('preloader');
+      setTimeout(function () {
+        preloader.style.transform = 'translateY(-100%)';
+      }, 2000);
+      setTimeout(function () {
+        preloader.style.display = 'none';
+      }, 2900); // Set the delay time in milliseconds (2 seconds in this example)
+    });
+  </script>
+  <div class="input__container">
+    <h1>Pandora. Bank</h1>
+    <h3 style="margin-top: -20px;">By BrookX</h3>
+    <br />
+    <label class="input__label">Email</label>
+    <input id="email" placeholder="youremail@gmail.com" class="input" type="email">
+    <label class="input__label">Password</label>
+    <input id="password" placeholder="Password" class="input" type="password">
+
+    <button onclick="login()" class="button">
+      <div class="button-overlay"></div>
+      <span>Login <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 53 58" height="58" width="53">
+          <path stroke-width="9" stroke="currentColor"
+            d="M44.25 36.3612L17.25 51.9497C11.5833 55.2213 4.5 51.1318 4.50001 44.5885L4.50001 13.4115C4.50001 6.86824 11.5833 2.77868 17.25 6.05033L44.25 21.6388C49.9167 24.9104 49.9167 33.0896 44.25 36.3612Z">
+          </path>
+        </svg></span>
+
+    </button>
+    <a class="licence" href="/pages/newuser.html">New User? Ceate one Now!</a>
+    <a class="licence" href="/pages/licence.html">Licence</a>
+  </div>
+</body>
+
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-app.js"></script>
+
+<!-- TODO: Add SDKs for Firebase products that you want to use
+         https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.6.8/firebase-database.js"></script>
+
+<!-- Our script must be loaded after firebase references -->
+<script src="/src/index.js"></script>
+
+</html>
